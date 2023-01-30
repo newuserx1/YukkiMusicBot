@@ -17,18 +17,18 @@ from pyrogram import filters
 load_dotenv()
 
 # Get it from my.telegram.org
-API_ID = int(getenv("API_ID", ""))
-API_HASH = getenv("API_HASH")
+API_ID = int(getenv("API_ID", "27747795"))
+API_HASH = getenv("API_HASH","a8b48e9880db88e4150f7f4c772d29a3")
 
 ## Get it from @Botfather in Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN")
+BOT_TOKEN = getenv("BOT_TOKEN","5578217277:AAGTBi2VQKFUBZXnSg-MWtW6yi2EHiZG3Ak")
 
 # Database to save your chats and stats... Get MongoDB:-  https://telegra.ph/How-To-get-Mongodb-URI-04-06
-MONGO_DB_URI = getenv("MONGO_DB_URI", None)
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://prasad:12345@cluster0.hpjtqnk.mongodb.net/?retryWrites=true&w=majority")
 
 # Custom max audio(music) duration for voice chat. set DURATION_LIMIT in variables with your own time(mins), Default to 60 mins.
 DURATION_LIMIT_MIN = int(
-    getenv("DURATION_LIMIT", "60")
+    getenv("DURATION_LIMIT", "120")
 )  # Remember to give value in Minutes
 
 # Duration Limit for downloading Songs in MP3 or MP4 format from bot
@@ -37,14 +37,14 @@ SONG_DOWNLOAD_DURATION = int(
 )  # Remember to give value in Minutes
 
 # You'll need a Private Group ID for this.
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", ""))
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001858578018"))
 
 # A name for your Music bot.
-MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME")
+MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME","MUSIC FOREVER")
 
 # Your User ID.
 OWNER_ID = list(
-    map(int, getenv("OWNER_ID", "").split())
+    map(int, getenv("OWNER_ID", "1256202333").split())
 )  # Input type must be interger
 
 # Get it from http://dashboard.heroku.com/account
@@ -65,10 +65,10 @@ GIT_TOKEN = getenv("GIT_TOKEN", None)
 
 # Only  Links formats are  accepted for this Var value.
 SUPPORT_CHANNEL = getenv(
-    "SUPPORT_CHANNEL", None
+    "SUPPORT_CHANNEL", "https://t.me/Music_Forever_X"
 )  # Example:- https://t.me/TheYukki
 SUPPORT_GROUP = getenv(
-    "SUPPORT_GROUP", None
+    "SUPPORT_GROUP", "https://t.me/Music_Forever_Chat"
 )  # Example:- https://t.me/YukkiSupport
 
 # Set it in True if you want to leave your assistant after a certain amount of time. [Set time via AUTO_LEAVE_ASSISTANT_TIME]
@@ -85,10 +85,10 @@ AUTO_SUGGESTION_TIME = int(
 )  # Remember to give value in Seconds
 
 # Set it True if you want to delete downloads after the music playout ends from your downloads folder
-AUTO_DOWNLOADS_CLEAR = getenv("AUTO_DOWNLOADS_CLEAR", None)
+AUTO_DOWNLOADS_CLEAR = getenv("AUTO_DOWNLOADS_CLEAR", "True")
 
 # Set it True if you want to bot to suggest about bot commands to random chats of your bots.
-AUTO_SUGGESTION_MODE = getenv("AUTO_SUGGESTION_MODE", None)
+AUTO_SUGGESTION_MODE = getenv("AUTO_SUGGESTION_MODE", "True")
 
 # Set it true if you want your bot to be private only [You'll need to allow CHAT_ID via /authorise command then only your bot will play music in that chat.]
 PRIVATE_BOT_MODE = getenv("PRIVATE_BOT_MODE", None)
@@ -103,8 +103,8 @@ TELEGRAM_DOWNLOAD_EDIT_SLEEP = int(getenv("TELEGRAM_EDIT_SLEEP", "5"))
 GITHUB_REPO = getenv("GITHUB_REPO", None)
 
 # Spotify Client.. Get it from https://developer.spotify.com/dashboard
-SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", None)
-SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", None)
+SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", "b462cc77d37948c8a475cc5115e73bcd")
+SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", "5b07efb51cc74ff884363887e00b8b27")
 
 # Maximum number of video calls allowed on bot. You can later set it via /set_video_limit on telegram
 VIDEO_STREAM_LIMIT = int(getenv("VIDEO_STREAM_LIMIT", "3"))
@@ -139,18 +139,13 @@ SET_CMDS = getenv("SET_CMDS", False)
 
 # You'll need a Pyrogram String Session for these vars. Generate String from our session generator bot @YukkiStringBot
 STRING1 = getenv("STRING_SESSION", None)
-STRING2 = getenv("STRING_SESSION2", None)
+STRING2 = getenv("STRING_SESSION2", "BQC77DYV_JPQg6ds2II-9CezqQvOBHNjHBektO42rzv_ePo_vn_rrdWXYg92q0unZoAYdGGjd3_azXLcQ1kqhSLZkRx4XElYlPY8BMjDQdKECkt3Y6gNehX6jX4PscXsI59KDQwIwGp-p8iFKjm3gqVveCGWwj_QeS3y-mkXaiCDIrMm0vLnN7RQ0Xe1eMxNEm_l4RbX_3GrAXL96E9Sok7wOQiCKavMB5a0_ZFM633AbTORsitKf1L1r2ezp7xian8FCWr1S0jeb9RPyZjSRow9Vj9Kn0c-sV5go-879WszgrCeBI8nk4IB_cMBHHmdE5H850HrQjsdBHtm2nR4OJwiAAAAAURUXX8A")
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
 STRING5 = getenv("STRING_SESSION5", None)
 
 
-#  __     ___    _ _  ___  _______   __  __ _    _  _____ _____ _____   ____   ____ _______
-#  \ \   / / |  | | |/ / |/ /_   _| |  \/  | |  | |/ ____|_   _/ ____| |  _ \ / __ \__   __|
-#   \ \_/ /| |  | | ' /| ' /  | |   | \  / | |  | | (___   | || |      | |_) | |  | | | |
-#    \   / | |  | |  < |  <   | |   | |\/| | |  | |\___ \  | || |      |  _ <| |  | | | |
-#     | |  | |__| | . \| . \ _| |_  | |  | | |__| |____) |_| || |____  | |_) | |__| | | |
-#     |_|   \____/|_|\_\_|\_\_____| |_|  |_|\____/|_____/|_____\_____| |____/ \____/  |_|
+## MUSIC FOREVER BOT STARTED.........##
 
 
 ### DONT TOUCH or EDIT codes after this line
@@ -168,7 +163,7 @@ autoclean = []
 
 
 # Images
-START_IMG_URL = getenv("START_IMG_URL", None)
+START_IMG_URL = getenv("START_IMG_URL", "https://telegra.ph/file/d29fcf68c38afbeba18da.jpg")
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
