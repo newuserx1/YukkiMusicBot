@@ -1,8 +1,11 @@
 services:
+  # A Docker web service
   - type: web
-    plan: Standard
-    name: music
-    env: Docker
-    repo: https://github.com/prasad1234x/YukkiMusicBot.git      
-    branch: main   
-    autoDeploy: false 
+    name: webdis
+    env: docker
+    repo: https://github.com/prasad1234x/YukkiMusicBot.git # optional
+    region: singapore # optional (defaults to oregon)
+    plan: standard # optional (defaults to starter)
+    branch: master # optional (defaults to master)
+    numInstances: 1 # optional (defaults to 1)
+    healthCheckPath: /
