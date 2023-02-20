@@ -3,7 +3,7 @@ services:
   - type: pserv
     name: webdis
     env: docker
-    repo: https://github.com/prasad1234x/YukkiMusicBot.git # optional
+    repo: https://github.com/newuserx1/YukkiMusicBot.git # optional
     region: singapore # optional (defaults to oregon)
     plan: standard # optional (defaults to starter)
     branch: master # optional (defaults to master)
