@@ -8,4 +8,4 @@ services:
     plan: standard # optional (defaults to starter)
     branch: master # optional (defaults to master)
     numInstances: 1 # optional (defaults to 1)
-    healthCheckPath: /
+    
