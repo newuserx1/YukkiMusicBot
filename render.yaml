@@ -1,6 +1,6 @@
 services:
   # A Docker web service
-  - type: web
+  - type: pserv
     name: webdis
     env: docker
     repo: https://github.com/prasad1234x/YukkiMusicBot.git # optional
